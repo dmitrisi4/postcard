@@ -24,7 +24,6 @@ const rootApp = document.getElementById('text-elems');
  const createrTextContainer = () => {
 	 let textEl =  document.getElementsByClassName('.item-text').length === 0;
 	 if (textEl) {
-		 debugger
 		 rootApp.appendChild(createrTextElem());
 	 }
 }

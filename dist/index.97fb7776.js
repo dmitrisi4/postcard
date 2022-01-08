@@ -20,10 +20,7 @@ const createrTextElem = ()=>{
 };
 const createrTextContainer = ()=>{
     let textEl = document.getElementsByClassName('.item-text').length === 0;
-    if (textEl) {
-        debugger;
-        rootApp.appendChild(createrTextElem());
-    }
+    if (textEl) rootApp.appendChild(createrTextElem());
 };
 
 //# sourceMappingURL=index.97fb7776.js.map
