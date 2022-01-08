@@ -1,3 +1,69 @@
+@import "https://fonts.googleapis.com/css2?family=Marck+Script&display=swap";
+.items-wrap {
+    display: flex;
+    justify-content: center;
+    color: #224092;
+    font-family: "Marck Script", cursive;
+    font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+    .items-wrap {
+        font-size: 16px;
+    }
+}
+.item-text {
+    opacity: 0;
+    display: block;
+    transform: translateX(50px);
+    margin: 0 2px;
+}
+.item-text[data-depth="0.1"] {
+    animation: showItems 0.2s 0.2s 1 forwards, transformItems 0.1666666667s 0.2s forwards;
+}
+.item-text[data-depth="0.2"] {
+    animation: showItems 0.4s 0.4s 1 forwards, transformItems 0.3333333333s 0.4s forwards;
+}
+.item-text[data-depth="0.3"] {
+    animation: showItems 0.6s 0.6s 1 forwards, transformItems 0.5s 0.6s forwards;
+}
+.item-text[data-depth="0.4"] {
+    animation: showItems 0.8s 0.8s 1 forwards, transformItems 0.6666666667s 0.8s forwards;
+}
+.item-text[data-depth="0.5"] {
+    animation: showItems 1s 1s 1 forwards, transformItems 0.8333333333s 1s forwards;
+}
+.item-text[data-depth="0.6"] {
+    animation: showItems 1.2s 1.2s 1 forwards, transformItems 1s 1.2s forwards;
+}
+.item-text[data-depth="0.7"] {
+    animation: showItems 1.4s 1.4s 1 forwards, transformItems 1.1666666667s 1.4s forwards;
+}
+.item-text[data-depth="0.8"] {
+    animation: showItems 1.6s 1.6s 1 forwards, transformItems 1.3333333333s 1.6s forwards;
+}
+.item-text[data-depth="0.9"] {
+    animation: showItems 1.8s 1.8s 1 forwards, transformItems 1.5s 1.8s forwards;
+}
+.item-text[data-depth="0.10"] {
+    animation: showItems 2s 2s 1 forwards, transformItems 1.6666666667s 2s forwards;
+}
+@keyframes showItems {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes transformItems {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+/*# sourceMappingURL=index.b42fbfa8.css.map */
 
 /* Demo 1 */
 .demo-1 .uc-container{
