@@ -1,0 +1,14 @@
+{
+  "name": "postcard",
+  "version": "1.0.0",
+  "description": "PostCard",
+  "scripts": {
+    "serve": "parcel serve index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "DS",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.1.1"
+  }
+}

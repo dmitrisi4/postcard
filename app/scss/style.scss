@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+.items-wrap {
+  display: flex;
+  justify-content: center;
+  color: #224092;
+  font-family: 'Marck Script', cursive;
+  font-size: 24px;
+  @media screen and (max-width: 767px){
+    font-size: 16px;
+  }
+}
+.item-text {
+  opacity: 0;
+  display: block;
+  transform: translateX(50px);
+  margin: 0 2px;
+}
+@for $i from 1 through 10 {
+  .item-text[data-depth="0.#{$i}"] {
+    animation: showItems #{$i / 5}s #{$i / 5}s 1 forwards, transformItems #{$i / 6}s #{$i / 5}s forwards;
+  }
+}
+@keyframes showItems {0% {	opacity: 0;}100% {opacity: 1;}}
+@keyframes transformItems {
+  0% {transform: translateX(50px);}
+  100% {transform: translateX(0px);}}

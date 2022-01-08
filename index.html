@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PFold: Paper-Like Unfolding Effect</title>
+	<meta name="keywords"
+				content="message"/>
+	<meta name="author" content="DS"/>
+	<link rel="shortcut icon" href="public/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="app/scss/style.scss"/>
+	<link rel="stylesheet" type="text/css" href="app/css/demo.css"/>
+	<link rel="stylesheet" type="text/css" href="app/css/pfold.css"/>
+	<link rel="stylesheet" type="text/css" href="app/css/custom1.css"/>
+	<script type="text/javascript" src="app/js/modernizr.custom.79639.js"></script>
+	<!--[if lte IE 8]>
+	<style>.support-note .note-ie {
+		display: block;
+	}</style><![endif]-->
+	<style>
+		body {
+			background: url(public/images/wt.jpeg);
+		}
+
+		.container > header h1 {
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+		}
+
+		.container > header h2,
+		p.info {
+			color: #4e2f1d;
+			text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<section class="main demo-1">
+
+		<div id="uc-container" class="uc-container">
+			<div class="uc-initial-content">
+				<!-- custom content -->
+				<span class="clickme">Click me</span>
+			</div>
+			<div class="uc-final-content">
+				<!-- custom content -->
+				<div class="scrollwrap">
+<!--					<h3>Dear Allen,</h3>-->
+					<div id="text-elems"></div>
+<!--					<p>Доброе утро, Юлия)</p>-->
+<!--					<p class="signature">Yours, Dimas</p>-->
+				</div>
+				<span class="close">x</span>
+			</div>
+		</div>
+	</section>
+
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="app/js/jquery.pfold.js"></script>
+<script type="text/javascript" src="app/js/textElem.js"></script>
+<script type="text/javascript">
+
+	$(function () {
+		var $container = $('#uc-container'),
+			pfold = $('#uc-container').pfold({
+				easing: 'ease-in-out',
+				folds: 3,
+				folddirection: ['left', 'bottom', 'right']
+			});
+
+		$container.find('span.clickme').on('click', function () {
+
+			pfold.unfold();
+			createrTextContainer();
+
+
+		}).end().find('span.close').on('click', function () {
+
+			pfold.fold();
+
+		});
+
+	});
+</script>
+</body>
+</html>
