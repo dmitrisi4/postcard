@@ -24,3 +24,10 @@
 @keyframes transformItems {
   0% {transform: translateX(50px);}
   100% {transform: translateX(0px);}}
+
+
+.uc-final-wrapper {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+

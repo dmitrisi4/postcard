@@ -63,4 +63,8 @@
     transform: translateX(0px);
   }
 }
+.uc-final-wrapper {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
 /*# sourceMappingURL=index.b42fbfa8.css.map */

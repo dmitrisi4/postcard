@@ -1,4 +1,4 @@
-const MESSAGE = 'Добрых снов,Юля;) ';
+const MESSAGE = 'Получиться всё что захочешь чтобы получилось;) ';
 const rootApp = document.getElementById('text-elems');
 
  const  createrTextElem = () => {
